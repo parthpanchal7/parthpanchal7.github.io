@@ -1,123 +1,349 @@
-<!doctype html>
-<html lang="en-US">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="Content-Type" content="text/html">
-  <title>Template Monster Sliding Navigation Demo</title>
-  <meta name="author" content="Jake Rocheleau">
-  <link rel="shortcut icon" href="http://www.templatemonster.com/favicon.ico">
-  <link rel="icon" href="http://www.templatemonster.com/favicon.ico">
-  <meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=no">
-  <link rel="stylesheet" type="text/css" media="all" href="css/styles.css">
-  <link rel="stylesheet" type="text/css" media="all" href="css/mmenu.css">
-  <link rel="stylesheet" type="text/css" media="all and (min-width: 960px)" href="css/mmenu-widescreen.css">
-  <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
-  <script type="text/javascript" src="js/jquery.mmenu.min.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Parth Panchal</title>
+	<link rel="icon" href="img/fv.png">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" href="style/bootstrap.css">
+	<link rel="stylesheet" href="style/style.css">
+	<script src="js/open.js"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.scrollUp.min.js"></script>
 </head>
-
-<body>
-  <nav id="slidemenu">
-   <ul>
-     <li class="mm-selected"><a href="#home">Home</a></li>
-     <li><a href="#about">About</a></li>
-     <li><a href="#work">My Work</a>
-       <ul>
-         <li><a href="#proj1">Some Project</a></li>
-         <li><a href="#proj2">Cool Item</a></li>
-         <li><a href="#proj3">Seriously So Cool</a></li>
-       </ul>
-     </li>
-     <li><a href="#contact">Contact</a></li>
-   </ul>
-  </nav><!-- @end #slidemenu -->
-  
-  <div id="wrapper">
-    <header id="topbar">
-      <a href="#slidemenu" id="menulink"></a>
-      
-      <h1>TemplateMonster Demo</h1>
-    </header><!-- @end #topbar -->
-    
-    <div id="content">
-      <section id="home">
-        <h2>A Simple HTML5 Webapp</h2>
-        <p>Inner content is courtesy of <a href="http://bluthipsum.com/">Bluth Ipsum</a>.</p>
-      </section><!-- @end #home -->
-      
-      <section id="about" class="hideme">
-        <h2>About Stuff</h2>
-        <p>Sweet old thing. Only two of those words describe Mom, so I know you're lying to me.</p>
-      </section><!-- @end #about -->
-      
-      <section id="work" class="hideme">
-        <h2>Example Works</h2>
-        <p>Select an item from the navigation sub-menu.</p>
-        
-        <p>Each project page displays a popular shot from Dribbble with a link back to the original source.</p>
-        
-        <p>And now more Ipsum...</p>
-        
-        <p>What is she doing at a beauty pageant? Is she running the lights or something? Whoa whoa whoa whoa. Wait. Are you telling me you have a multi-stage trick with hidden identities?</p>
-      </section><!-- @end #work -->
-      
-      <section id="contact" class="hideme">
-        <h2>Get in Touch?</h2>
-        <p>Send a quick e-mail over to this random guy named George. He knows what to do.</p>
-        
-        <form id="nonworkingform" method="post" action="#">
-          <input type="text" name="name" id="name" class="formtxt" placeholder="Name...">
-          <input type="text" name="email" id="email" class="formtxt" placeholder="Email...">
-          <textarea name="message" id="message" class="formtxtarea" placeholder="Your message..."></textarea>
-        </form>
-      </section><!-- @end #contact -->
-      
-      <section id="proj1" class="hideme">
-        <h2>Magic Potion Icon</h2>
-        <p><a href="http://dribbble.com/shots/1261019-Magic-Potion-Icon">Original source</a> designed by <a href="http://dribbble.com/Creativedash">Creativedash</a></p>
-        
-        <p><img src="images/project-image-01.jpg" alt="magic potion icon by creativedash"></p>
-      </section><!-- @end #proj1 -->
-      
-      <section id="proj2" class="hideme">
-        <h2>Spirit Magazine</h2>
-        <p><a href="http://dribbble.com/shots/1260404-Spirit-Magazine-August-2013">Original source</a> designed by <a href="http://dribbble.com/bemocs">Brian Edward Miller</a></p>
-        
-        <p><img src="images/project-image-02.jpg" alt="Spirit Magazine August 2013"></p>
-      </section><!-- @end #proj2 -->
-      
-      <section id="proj3" class="hideme">
-        <h2>Harry</h2>
-        <p><a href="http://dribbble.com/shots/1260268-Harry">Original source</a> designed by <a href="http://dribbble.com/davidwehmeyer">David L. Wehmeyer</a></p>
-        
-        <p><img src="images/project-image-03.jpg" alt="harry potter custom illustration"></p>
-      </section>
-    </div><!-- @end #content -->
-  </div><!-- @end #wrapper -->
-<script type="text/javascript">
-$(function(){
-  $('nav#slidemenu').mmenu({
-    slidingSubmenus: false,
-    moveBackground: false,
-    onClick: {
-      close             : true,
-      setSelected       : true,
-      setLocationHref   : null,
-      delayLocationHref : true,
-      blockUI           : null,
-      callback          : function(){
-        // check which link has been clicked
-        var newpageurl = $(this).attr('href');
-        var newsection = "section"+newpageurl;
-        
-        $('#content section').each(function(){ // add the .hideme class onto every section
-          if(!$(this).hasClass('hideme')) { $(this).addClass('hideme'); }
+<script>
+    $(function () {
+        $.scrollUp({
+          scrollDistance: 150,
+          animation: 'slide',
+          scrollImg: true
         });
-        
-        $(newsection).removeClass('hideme'); // display only the selected content section
+    });
+  </script>
+<body onload="myFunction()">
+	<div id="loading">
+    </div>
+	<a name="home"></a>
+	<div class="whatsapp d-block d-md-none d-xl-none d-lg-none">
+		<a href="https://api.whatsapp.com/send?phone=919925724245&text=Hello.." target="new"><img src="img/whatsapp.png" alt=""></a>
+	</div>
+	<div class="dv1">
+		
+		<div id="header">
+			<div class="top-header">
+				<i class="fa fa-bars d-block d-md-none d-xl-none d-lg-none" onclick="opn()" style="cursor: pointer"></i>
+				<h1 class="d-block d-md-none d-xl-none d-lg-none">parth<span style="color:#e8b736">&nbsp;panchal</span></h1>
+		<div class="container">
+			<div class="row">
+				
+				<div class="col-md-12 d-none d-md-block d-xl-block d-lg-block">
+					<ul id="menu">
+
+						<li><a href="#home">Home</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#work">Work</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</div>
+
+			</div>
+
+
+		</div>
+		<div id="mob-menu">
+			<i class="fa fa-times d-block d-md-none d-xl-none d-lg-none" onclick="cls()" style="cursor: pointer;"></i>
+			<ul>
+				<li><a href="#home">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#work">Work</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+		</div>
+		
+		<div class="myname text-center">
+				
+			<div class="name-content">
+					
+					<img src="img/myimg.jpg" alt="p@rth" id="parth">
+				
+			
+					<h1>parth<span style="color:#e8b736">&nbsp;panchal</span></h1>
+					<h2>Front End <span style="color:#e8b736">Dev</span></h2>
+				
+			<a href="#about"><img src="img/scroll.gif" alt="scroll" id="scroll-img"></a>
+		</div>
+		</div>
+	</div>
+
+<!-- 
+	<header class="nav center">
+		<p class="logo">Parth Panchal</p>
+		<input type="checkbox" name="" class="checkBtn" />
+		<ol class="center">
+			<a href="#"><li>Home</li></a>
+			<a href="#"><li>About</li></a>
+			<a href="#"><li>Work</li></a>
+			<a href="#"><li>Contact</li></a>
+		</ol>
+	</header>
+	<section class="main2">
+		<div class="box2">
+			<h1>P@rth Panchal</h1>
+			<p>Web Designer</p>
+			<button class="btn">About</button>
+		</div>
+		<img src="img/parth.png" alt="nologo">
+	</section> -->
+
+	</div>
+
+	
+
+	<a name="about"></a>
+	<div class="dv2">
+		<div class="container">
+			<div class="row gap100 h-100 align-items-center">
+				<div class="col-md-6">
+					<img src="img/parth.jpg" alt="" class="img-fluid">
+				</div>
+				<div class="col-md-6">
+					<h2 class="gap40">About Me</h2>
+						
+						<p class="lead">Hi! My name is Parth Panchal. I am a Fron-End Developer, and I'm very passionate and dedicated to my work. I have acquired the skills and knowledge necessary to make your project a success. I enjoy every step of the design process, from discussion and collaboration to concept and execution, but I find the most satisfaction in seeing the finished product do everything for you that it was created to do.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="dv3">
+		<div class="container">
+			<h2 class="gap100" style="display: inline-block;">Skills</h2>
+			<div class="row">
+				<div class="col-12">
+					<div class="html top20">HTML
+					<div class="outer">
+						<div class="h-inside"></div>
+					</div></div>
+					<div class="css top20">CSS
+					<div class="outer">
+						<div class="c-inside"></div>
+					</div></div>
+					<div class="bs top20">bootstrap
+						<div class="outer">
+							<div class="bs-inside"></div>
+						</div></div>
+					<div class="js top20">JavaScript
+					<div class="outer">
+						<div class="j-inside"></div>
+					</div></div>
+					<div class="jq top20">jQuery
+					<div class="outer">
+						<div class="jq-inside"></div>
+					</div></div>
+					<!-- <div class="jq top20">React Js
+					<div class="outer">
+						<div class="jq-inside"></div>
+					</div></div>
+					<div class="jq top20">Php, Mysql
+					<div class="outer">
+						<div class="jq-inside"></div>
+					</div></div>-->
+
+					<div class="ps top20">Photoshop
+					<div class="outer">
+						<div class="ps-inside"></div>
+					</div></div>
+
+					<div class="fs top20">Figma to HTML
+					<div class="outer">
+						<div class="fh-inside"></div>
+					</div></div>
+
+					<div class="axs top20">Adobe XD to HTML
+					<div class="outer">
+						<div class="ax-inside"></div>
+					</div></div>
+
+				</div>
+			</div>
+		</div>
+		<br><br>
+	</div>
+	<a name="work"></a>
+	<div class="work">
+		<div class="container">
+			<h2 class="gap100" style="display: inline-block;">Here's what I've done so far</h2>
+			<div class="row">
+				<div class="col-md-4 work-img">
+					<div class="caption">
+					<h4>Blues Breaker Box</h4>
+					<a href="https://bluesbreakerbox.com" target="new" class="btn btn-warning">Check</a>
+					</div>
+					<img src="img/bbb.png" alt="" class="img-fluid workimg">
+				</div>
+				<div class="col-md-4 work-img">
+					<div class="caption">
+					<h4>Burger House</h4>
+					<a href="burger" target="new" class="btn btn-warning">Check</a>
+					</div>
+					<img src="img/ss1.png" alt="" class="img-fluid workimg">
+				</div>
+				<!-- <div class="col-md-4 work-img">
+					<div class="caption">
+					<h4>Food Site</h4>
+					<a href="food" target="new" class="btn btn-warning">Check</a>
+					</div>
+					<img src="img/food.png" alt="" class="img-fluid workimg">
+				</div> -->
+				<div class="col-md-4 work-img">
+					<div class="caption">
+					<h4>Dwarkesh Peninsula</h4>
+					<a href="http://dwarkeshpeninsula.com/" target="new" class="btn btn-warning">Check</a>
+					</div>
+					<img src="img/dwarkesh-peninsula.png" alt="" class="img-fluid workimg">
+				</div>
+				
+			
+		</div>
+
+		<div class="row work-row">
+			
+				<div class="col-md-4 work-img">
+					<div class="caption">
+					<h4>Triyock BPO</h4>
+					<a href="https://triyock.com" target="new" class="btn btn-warning">Check</a>
+					</div>
+					<img src="img/triyock.png" alt="" class="img-fluid workimg">
+				</div>
+				<div class="col-md-4 work-img">
+					<div class="caption">
+					<h4>JK Car Rental</h4>
+					<a href="https://jkcarrental.in/" target="new" class="btn btn-warning">Check</a>
+					</div>
+					<img src="img/jk-car.png" alt="" class="img-fluid workimg">
+				</div>
+				<!-- <div class="col-md-4 work-img">
+					<div class="caption">
+					<h4>Indian Navy</h4>
+					<a href="http://parthpanchal.epizy.com/index.html" target="new" class="btn btn-warning">Check</a>
+					</div>
+					<img src="img/navy1.jpg" alt="" class="img-fluid workimg">
+				</div> -->
+				<div class="col-md-4 work-img">
+				<div class="caption">
+				<h4>Landing Page</h4>
+				<a href="nike/index.html" target="new" class="btn btn-warning">Check</a>
+				</div>
+				<img src="img/nike3.png" alt="" class="img-fluid workimg">
+			</div>
+		</div>
+
+
+		</div>
+		<br><br>
+	</div>
+	<a name="contact"></a>
+	<div class="contact">
+		<div class="container">
+			<!-- <h2 class="gap100">Drop me a message</h2> -->
+			
+			<div class="formbx">
+				 <form action="http://freedomofart.in/parth/phone.php" autocomplete="off" method="POST">
+				 	<h2>Drop me a message</h2>
+				 	<div class="inputBox">
+				 		<input type="text" name="name" required="required">
+				 		<span>Full Name</span>
+				 	</div>
+
+				 	<div class="inputBox">
+				 		<input type="email" name="email" required="required">
+				 		<span>Email Address</span>
+				 	</div>
+
+				 	<div class="inputBox">
+				 		<textarea name="msg" required="required"></textarea>
+				 		<span>Type Your Message Here...</span>
+				 	</div>
+
+				 	<div class="inputBox">
+				 		<input type="submit" value="Send">
+				 		
+				 	</div>
+
+				 	
+				 </form>
+			</div>
+
+			
+				<div class="imgBx">
+					<img src="img/boy.png" alt="">
+				</div>
+				
+		</div>
+	</div>
+	
+	<div class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="social-icon">
+					<a href="https://www.facebook.com/paarth.panchal.7/" target="new"><i class="fa fa-facebook"></i></a>
+					<a href="https://www.instagram.com/that_cricket_guy_07/" target="new"><i class="fa fa-instagram"></i></a>
+					<a href="https://twitter.com/parthpanchal133" target="new"><i class="fa fa-twitter"></i></a>
+					<a href="https://www.linkedin.com/in/parth-panchal-a3992ba8/" target="new"><i class="fa fa-linkedin"></i></a>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<h6>Copyright &copy; 2020, Parth Panchal</h6>
+				</div>
+				
+			</div>
+		</div>
+	<br><br><br>
+	</div>
+	<script>
+		$(document).ready(function(){
+			$(window).scroll(function(){
+			var src = $(window).scrollTop();
+
+			if (src >= "150")
+			{
+				$('.top-header').css('background-color','#232426');
+				$('.top-header').css('box-shadow','0px 0px 10px #232426');
+			}
+			else
+			{
+				$('.top-header').css('background-color','transparent');
+				$('.top-header').css('box-shadow','none');
+			}
+			})
+		})
+	</script>
+	
+    <script>
+      
+      var preloader = document.getElementById('loading');
+
+      function myFunction()
+      {
+        preloader.style.display = 'none';
       }
-   }
-  });
-});
+    </script>
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/62039b0fb9e4e21181be36a2/1frf1bed2';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
 </script>
-</body>
+<!--End of Tawk.to Script-->
+</body>	
 </html>

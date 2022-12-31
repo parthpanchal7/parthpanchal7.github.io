@@ -1,0 +1,371 @@
+:root
+{
+    --black-color: #000;
+    --white-color: #fff;
+    --font-color: #D9930B;
+}
+@font-face {
+    font-family: Railway;
+    src: url(../Raleway/Raleway-Italic-VariableFont_wght.ttf);
+  }
+a,a:hover
+{
+    text-decoration: none;
+}
+ul
+{
+    margin:0;
+    padding:0;
+}
+.applogo
+{
+    width: 50px;
+    height: auto;
+}
+.nav-wrap
+{
+    background: var(--black-color);
+}
+.nav-link
+{
+    color: var(--font-color) !important;
+}
+.nav-item:hover .nav-link
+{
+    border-bottom: 1px solid var(--font-color);
+}
+.navbar-toggler-icon
+{
+    color: var(--white-color);
+}
+.head-txt
+{
+    font-family: Railway;
+    font-size:52px;
+    font-weight: 900;
+}
+.home-page p
+{
+    font-size:28px;
+}
+.home-page
+{
+    margin-top: 80px;
+}
+.txt-p
+{
+    font-size:24px !important;
+}
+.download-btn
+{
+    width: 120px;
+    height: auto;
+}
+.text-sec-head h3
+{
+    padding:0 300px;
+}
+.features
+{
+    background:#faf5f5;
+}
+.features h4
+{
+    font-weight: 600;
+}
+.features p
+{
+    font-size:18px;
+}
+.add-text
+{
+    padding:0 200px;
+}
+
+.contact
+{
+    background: url("../images/contactbg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: var(--white-color);
+}
+.contact-list li
+{
+    list-style: none;
+}
+
+.contact-list .address::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f3c5";
+    position: absolute;
+    margin-left: -40px;
+    font-size: 35px;
+  }
+  
+  .contact-list .phone::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f879";
+    position: absolute;
+    margin-left: -45px;
+    font-size: 35px;
+  }
+  
+  .contact-list .email::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f0e0";
+    position: absolute;
+    margin-left: -45px;
+    font-size: 35px;
+  }
+  .contact-frm
+  {
+      background: var(--white-color);
+      height: auto;
+  }
+  .form1
+  {
+    position: relative;
+    top: 51%;
+    left: 50%;
+    transform: translate(-45%, 0);
+  }
+  .contact-frm .input-field
+  {
+      width: 80%;
+      margin: 0 0 20px 20px;
+      border:none;
+      border-bottom: 1px solid grey;
+      outline:none;
+  }
+  
+  .contact-frm .input-field:hover
+  {
+      border-bottom: 1px solid var(--black-color);
+  }
+  .contact-frm h4
+  {
+      position:relative;
+      color: var(--black-color);
+      padding:20px 0 20px 50px;
+      font-size:24px;
+  }
+  .send-btn
+  {
+      padding: 10px 20px;
+      margin: 0 0 20px 20px;
+      background:#01496F;
+      text-decoration:none;
+      color: var(--white-color);
+  }
+  .send-btn:hover
+  {
+      color: var(--white-color);
+  }
+  .contact-frm textarea
+  {
+      width: 80%;
+      margin: 0 0 20px 20px;
+      border:none;
+      border-bottom: 1px solid grey;
+      outline:none;
+      resize: none;
+  }
+  footer
+  {
+      background: rgba(0,0,0,0.8);
+  }
+.footer-link
+{
+    text-decoration: none;
+    color: var(--white-color);
+    font-weight: 700;
+}
+  .contact-list1, footer p, footer span
+  {
+      color: var(--white-color);
+      font-size:16px;
+  }
+  footer p
+  {
+      margin:0;padding:0;
+  }
+  .times
+  {
+      color: rgba(255,255,255,0.5);
+  }
+.contact-list1 li
+{
+    list-style: none;
+}
+.cont-head
+{
+    color: var(--white-color);
+}
+.contact-list1 .address::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f3c5";
+    position: absolute;
+    color: #03A9F4;
+    margin-left: -20px;
+  }
+  
+  .contact-list1 .phone::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f879";
+    position: absolute;
+    color: #03A9F4;
+    margin-left: -25px;
+  }
+  
+  .contact-list1 .email::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f0e0";
+    position: absolute;
+    color: #03A9F4;
+    margin-left: -25px;
+  }
+  .twitter li, .updates li
+{
+    list-style: none;
+}
+.updates li
+{
+    margin-bottom:15px;
+}
+.twitter .address::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f099";
+    position: absolute;
+    color: #03A9F4;
+    margin-left: -20px;
+  }
+  
+.twitter .phone::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f099";
+    position: absolute;
+    color: #03A9F4;
+    margin-left: -25px;
+  }
+  
+.twitter .email::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f099";
+    position: absolute;
+    color: #03A9F4;
+    margin-left: -25px;
+  }
+  .timeli::before
+  {
+      position: absolute;
+      content:"28 APR";
+      border:1px solid var(--white-color);
+      color: var(--white-color);
+      width: 40px;
+      height: 45px;
+      text-align: center;
+      margin-left:-45px;
+      font-size:14px;
+  }
+  footer input
+  {
+      border-radius: 5px;
+      height: 40px;
+  }
+  .okbtn
+  {
+    position: absolute;
+    margin-top: 12px;
+    margin-left: -27px;
+    font-size: 22px;
+  }
+  .social-icons
+  {
+      width: 30px;
+      height: auto;
+      margin:20px 8px;
+  }
+  .home-page img, .features img
+  {
+      border-radius:5px;
+  }
+  /* media queries */
+  @media (max-width:1024px)
+  {
+    .text-sec-head h3 {
+        padding: 0 100px;
+    }
+  }
+  @media (max-width:768px)
+  {
+    .navbar-nav .nav-link
+    {
+        text-align:center;
+    }
+    .features
+    {
+        text-align: center;
+    }
+    .add-text {
+        padding: 0 80px;
+    }
+    .contact-list {
+        text-align: center;
+    }
+    .contact-list .address::before {
+        margin-top: -18px;
+        margin-left: -70px;
+    }
+    .contact-list .phone::before {
+        margin-left: -70px;
+    }
+    .contact-list .email::before {
+        margin-left: -70px;
+    }
+    .text-sec-head h3,  .add-text  {
+        padding: 0 40px;
+    }
+    .home-page img, .features img {
+        padding-top: 15px;
+    }
+    .text-sec-head h3
+    {
+        margin-top: 10px;
+    }
+    
+    .form1 {
+        transform: translate(-47%, 0);
+    }
+  }
+  @media (max-width:375px)
+  {
+    .head-txt {
+        font-size:48px;
+    }
+    .home-page p {
+        font-size: 24px;
+    }
+    .text-sec-head h3, .add-text {
+        padding: 0;
+    }
+    footer
+    {
+        text-align:center;
+    }
+    .timeli::before {
+        width: 30px;
+        height: 35px;
+        margin-left: -185px;
+        font-size: 11px;
+    }
+  }

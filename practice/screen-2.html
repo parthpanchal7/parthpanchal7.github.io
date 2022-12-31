@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Screen 2</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/fontawesome.min.css" integrity="sha512-R+xPS2VPCAFvLRy+I4PgbwkWjw1z5B5gNDYgJN5LfzV4gGNeRQyVrY7Uk59rX+c8tzz63j8DeZPLqmXvBxj8pA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="screen-2">
+
+<div class="screen-2-wrapper">
+	<div class="container main-container">
+		<div class="row main-row">
+			<ul id="sidebar">
+				<div class="logo-bar"><a href="#" class="logo"><img src="images/logo.png" alt="" class="img-fluid"></a>
+					<p id="mobile-menu-icon" onclick="showe();"><i class="fa-solid fa-bars"></i></p>
+				</div>
+				<li><a href="#"><i class="fa-solid fa-house"></i>&nbsp; <span class="menu_name">Dashboard</span></a></li>
+				<li><a href="#"><i class="fa-solid fa-chart-simple"></i>&nbsp; <span class="menu_name">Analytics</span></a></li>
+				<li class="active"><a href="#"><i class="fa-solid fa-comment"></i>&nbsp; <span class="menu_name">Messages</span></a> <div class="count-bubble">6</div></li>
+				<li><a href="#"><i class="fa-solid fa-bookmark"></i>&nbsp; <span class="menu_name">Collections</span></a></li>
+				<li><a href="#"><i class="fa-solid fa-users"></i>&nbsp; <span class="menu_name">Users</span></a></li>
+
+				<div class="lower-sidebar">
+					<li><a href="#"><i class="fa-solid fa-gear"></i>&nbsp; <span class="menu_name">Settings</span></a></li>
+					<li><a href="#"><i class="fa-solid fa-bell"></i>&nbsp; <span class="menu_name">Notifications</span></a> <div class="count-bubble red">23</div></li>
+				</div>
+			</ul>
+			<div class="admin-content">
+				<div class="admin-heading">
+					<div class="container">
+						<div class="row justify-content-between align-items-center">
+							<div class="col-md-6">
+								<h3>Security Settings</h3>
+							</div>
+							<div class="col-md-6 text-end">
+								<div class="edit-btns">
+									<a href="#" class="edit-btn"><i class="fa-solid fa-pen-to-square"></i> edit</a>
+									<a href="#" class="create-btn"><i class="fa-solid fa-plus"></i> create</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="test">
+					 <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item active"><a class="nav-link active" href="#home" role="tab" aria-controls="home" data-bs-toggle="tab">Overview</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#profile" role="tab" aria-controls="profile" data-bs-toggle="tab">Users</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#messages" role="tab" aria-controls="messages" data-bs-toggle="tab">Settings</a></li>
+                    </ul>
+                    </div>
+				</div>
+
+				<div class="content-wrapper">
+
+				<div class="tabbs">
+					<div class="test">
+                
+                <div class="tab-container-one">
+                   
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        	<div class="inside-block">
+                        		<div>
+                        			<h4>Two-factor Authentication</h4>
+                        			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quod porro debitis, dicta at corrupti!</p>
+                        		</div>
+                        	
+                        	<a href="#" class="enable-btn">Enable</a>
+                        	</div>
+                        	<div class="inside-block">
+                        		<div>
+                        			<h5>Authentication app</h5>
+                        			<p>Google auth app</p>
+                        		</div>
+                        		<a href="#" class="setup-btn">Setup</a>
+                        	</div>
+                        	<div class="inside-block">
+                        		<div>
+                        			<h5>Another e-mail</h5>
+                        			<p>E-mail to send verification link</p>
+                        		</div>
+                        		<a href="#" class="setup-btn">Setup</a>
+                        	</div>
+                        	<div class="inside-block">
+                        		<div>
+                        			<h5>SMS Recovery</h5>
+                        			<p>Your phone number or something</p>
+                        		</div>
+                        		<a href="#" class="setup-btn">Setup</a>
+                        	</div>
+                        </div>
+                        <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <h2>Users</h2></div>
+                        <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">
+                            <h2>Settings</h2></div>
+                    </div>
+                </div>
+    </div>
+
+				</div>
+
+				<div class="devices-tab">
+					<div class="device-head-tab">
+						<div class="device-icon">
+							<i class="fa-solid fa-laptop"></i>
+						</div>
+						<h4>Devices</h4>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+						<a href="#" class="enable-btn">Sign out from all devices</a>
+					</div>
+					<div class="single-device-tab">
+						<span class="mob-icon"><i class="fa-solid fa-mobile-screen"></i></span>
+						<div class="device-info">
+							<h4 class="device-name">iPhone 11</h4>
+							<p class="device-location">London, UK <span class="device-date">Oct 23 at 1:15 AM</span></p>
+						</div>
+						<div class="menu-icon"><i class="fa-solid fa-ellipsis-vertical"></i></div>
+					</div>
+					<div class="single-device-tab">
+						<span class="mob-icon"><i class="fa-solid fa-laptop"></i></span>
+						<div class="device-info">
+							<h4 class="device-name">Macbook Pro</h4>
+							<p class="device-location">London, UK <span class="device-date">Oct 23 at 1:15 AM</span></p>
+						</div>
+						<div class="menu-icon"><i class="fa-solid fa-ellipsis-vertical"></i></div>
+					</div>
+					<div class="single-device-tab">
+						<span class="mob-icon"><i class="fa-solid fa-mobile-screen"></i></span>
+						<div class="device-info">
+							<h4 class="device-name">iPhone SE</h4>
+							<p class="device-location">London, UK <span class="device-date">Oct 23 at 1:15 AM</span></p>
+						</div>
+						<div class="menu-icon"><i class="fa-solid fa-ellipsis-vertical"></i></div>
+					</div>
+					<div class="single-device-tab">
+						<span class="mob-icon"><i class="fa-solid fa-mobile-screen"></i></span>
+						<div class="device-info">
+							<h4 class="device-name">iPhone 11</h4>
+							<p class="device-location">London, UK <span class="device-date">Oct 23 at 1:15 AM</span></p>
+						</div>
+						<div class="menu-icon"><i class="fa-solid fa-ellipsis-vertical"></i></div>
+					</div>
+
+
+					<div class="help-btn">
+						<a href="#">Need help?</a>
+					</div>
+				</div>
+
+				<div class="password-tab">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-6">
+								<h4>Password</h4>
+								<p>Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Eveniet, tempora, libero ipsam dolorem iusto optio.</p>
+
+								<form action="#" class="password-form" method="POST">
+									<label>Current password</label>
+									<input type="password" class="form-control mb-3" placeholder="Current password">
+									<label>New password</label>
+									<input type="password" class="form-control mb-3" placeholder="New password">
+									<label>Confirm password</label>
+									<input type="password" class="form-control mb-3" placeholder="Confirm password">
+								</form>
+							</div>
+							<div class="col-md-6">
+								<div class="password-rules">
+									<h5>Rules for passwords</h5>
+									<p>To create a new password, you have to meet all of the following requirements:</p>
+									<ul class="rules">
+										<li>Minimum 8 characters</li>
+										<li>At least one special character</li>
+										<li>At least one number</li>
+										<li>Can't be the same as a previous</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/js/all.min.js" integrity="sha512-8pHNiqTlsrRjVD4A/3va++W1sMbUHwWxxRPWNyVlql3T+Hgfd81Qc6FC5WMXDC+tSauxxzp1tgiAvSKFu1qIlA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/custom.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Screen 1</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<section class="section-one">
+<!-- header -->
+	<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="#">Landing</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Reviews</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">FAQ</a>
+        </li>
+        <li class="nav-item btn-item">
+          <a class="nav-link get-started-btn" href="#">Get Started</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- header ends here -->
+<div class="home-content">
+	<div class="container">
+		<div class="row justify-content-between">
+			<div class="col-lg-6 align-self-center">
+				<h1 class="heading-1">Fly makes you<br>faster</h1>
+				<p class="home-para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque, officia! Eveniet dolore asperiores nemo neque rerum cumque dolor itaque cumque dolor itaque, </p>
+				<a href="screen-2.html" class="pricing-btn">see pricing</a>
+			</div>
+			<div class="col-lg-4">
+				<div class="sign-up-form">
+					<h2 class="form-heading">Sign Up for Free</h2>
+					<form method="POST"  onSubmit="return fullformcheck()">
+						<div class="mb-3">
+						    <input type="text" class="form-control" placeholder="Full name" id="full_name" name="full_name" onBlur="namecheck()">
+						    <div id="error_name" class="form-text"></div>
+						  </div>
+						  <div class="mb-3">
+						    <input type="email" class="form-control" placeholder="Email" id="email_one" name="email_one" onBlur="emailcheck_one()">
+						    <div id="error_mail_one" class="form-text"></div>
+						  </div>
+						  <div class="mb-3">
+						    <input type="email" class="form-control" placeholder="Email" id="email_two" name="email_two" onBlur="emailcheck_two()">
+						    <div id="error_mail_two" class="form-text"></div>
+						  </div>
+						  <div class="mb-3">
+						    <select id="type_select" id="type_select" name="type_select" onBlur="optioncheck()">
+						    	<option value="select type" selected disabled>Type</option>
+						    	<option value="option 1">Option 1</option>
+						    	<option value="option 2">Option 2</option>
+						    	<option value="option 3">Option 3</option>
+						    </select>
+						    <div id="error_type" class="form-text"></div>
+						    <div class="dropdown">
+						    	<div class="dropdown_selected" onclick="dropdown_open()">Selected Value	</div>
+						    	<ul id="main_dropdown">
+						    		<li>One</li>
+						    		<li>Two</li>
+						    		<li>Four</li>
+						    		<li>Five</li>
+						    	</ul>
+						    </div>
+						  </div>
+						  
+						  <input type="submit" name="submit" class="btn sub-btn" value="Register">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</section>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/custom.js"></script>
+<script>
+	var btnbool = false;
+	function dropdown_open(){
+		
+
+		if(btnbool == true){
+			document.getElementById('main_dropdown').style.transform = "rotateX(90deg)";
+			btnbool = false;
+		}
+		else{
+			document.getElementById('main_dropdown').style.transform = "rotateX(0deg)";
+			btnbool = true;	
+		}
+	}
+</script>
+</body>
+</html>

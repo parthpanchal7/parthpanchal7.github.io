@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Practical Test - Parth Panchal</title>
+	<link rel="stylesheet" href="style/bootstrap.min.css">
+	<link rel="stylesheet" href="style/all.min.css">
+	<link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+	<div class="main-wrapper">
+<div class="container">
+	<div class="row justify-content-center mt-5 pt-5">
+		<div class="col-md-12">
+	</div>
+	<div class="multi-step-form">
+    <ul class="nav nav-tabs" id="myTab">
+        <li class="nav-item">
+            <a href="#home" class="nav-link active one" data-bs-toggle="tab"><span class="digit">1</span> About You</a>
+        </li>
+        <li class="nav-item">
+            <a href="#profile" class="nav-link two" data-bs-toggle="tab"><span class="digit">2</span> About Your Company</a>
+        </li>
+        <li class="nav-item">
+            <a href="#messages" class="nav-link three" data-bs-toggle="tab"><span class="digit">3</span> Finishing Up</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+    	<form name="form1" method="POST" id="frm1">
+        <div class="tab-pane fade show active" id="home">
+           <div class="input-group mb-3">
+           	<label>Full Name</label>
+           	<div class="position-relative">
+           	<input type="text" class="form-control" placeholder="Enter Your Name" name="fnm" id="fName" onBlur="nameCheck()">
+           	<span class="errorIcon" id="icon_one"><i class="fas fa-exclamation"></i></span>
+           	</div>
+           	<span id="nameError"></span>
+           </div>
+              <div class="input-group mb-3">
+           	<label>Your Email</label>
+           	<div class="position-relative">
+           	<input type="email" class="form-control" placeholder="Enter Your Email" id="eMail" name="eMail" onBlur="emailCheck()">
+           	<span class="errorIcon" id="icon_two"><i class="fas fa-exclamation"></i></span>
+           </div>
+           	<span id="mailError"></span>
+           </div>
+           <div class="btn-group multi">
+        	<button class="btnPrevious btn btn-warning disabled">Previous</button>
+        	 <button class="btnNext btn btn-primary" onclick="return tabOne()">Next</button>
+        </div>
+        </div>
+        <div class="tab-pane fade" id="profile">
+        	 <div class="input-group mb-3">
+           	<label>Your Company Name</label>
+           	<div class="position-relative">
+           	<input type="text" class="form-control" placeholder="Enter Your Company / Organization Name" id="company" name="companyName" onBlur="companyCheck()">
+           		<span class="errorIcon" id="icon_three"><i class="fas fa-exclamation"></i></span>
+           	</div>
+           	<span id="companyError"></span>
+           </div>
+            <div class="input-group mb-3">
+           	<label>Number of Employees</label>
+           	<div class="position-relative">
+           	<input type="text" class="form-control" placeholder="Enter Total Number of Employees" id="emps" name="Employee" onBlur="empCheck()">
+           		<span class="errorIcon" id="icon_four"><i class="fas fa-exclamation"></i></span>
+           	</div>
+           	<span id="empError"></span>
+           </div>
+           <div class="btn-group multi">
+        	<button class="btnPrevious btn btn-warning">Previous</button>
+        	 <button class="btnNext btn btn-primary" onClick="return tabTwo()">Next</button>
+        	</div>
+        </div>
+        <div class="tab-pane fade" id="messages">
+           <div class="input-group mb-3">
+           	<label>Where did you hear about Us</label>
+           	<select id="aBout" class="form-control" name="SelectVal" onBlur="abtCheck()">
+           		<option value=""></option>
+           		<option value="online-ad">Online Ad</option>
+           		<option value="friend">Friend</option>
+           		<option value="other">Other</option>
+           	</select>
+           	<span id="selectError"></span>
+           </div>
+           <div class="input-group mb-3">
+           		<input type="checkbox" id="term">&nbsp;<label class="mb-0" id="checkText"> I accept Terms & Conditions</label>
+           	<span id="termsError"></span>
+           </div>
+          <div class="btn-group multi">
+        	<button class="btnPrevious btn btn-warning">Previous</button>
+        	<button class="sub-btn btn btn-success" onClick="return tabThree()">Submit</button>
+        </div>
+        </div>
+        
+    </form>
+    </div>
+    
+    </div>
+    </div>
+</div>
+</div>
+<script src="js/jquery-3.6.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>	
+<script src="js/validation.js"></script>
+<script src="js/all.min.js"></script>
+<script>
+$('.btnPrevious').click(function() {
+  const prevTabLinkEl = $('.nav-tabs .active').closest('li').prev('li').find('a')[0];
+  const prevTab = new bootstrap.Tab(prevTabLinkEl);
+  prevTab.show();
+});
+$( document).ready(function(){
+  $('.nav-link > .active').next('a').trigger('click');
+  $("#previous").addClass('disabled');
+});
+</script>
+<script>
+	$(".btnNext").click(function(e) {
+    e.preventDefault();
+});
+</script>
+</body>
+</html>

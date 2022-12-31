@@ -1,0 +1,124 @@
+html, body{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.multi-step-form li.nav-item {
+    width: 32.3%;
+    text-align: center;
+    margin: 0 0.5%;
+}
+.multi-step-form{
+    border: 1px solid #ccc;
+    border-radius: 5px 5px 0 0;
+    padding: 0;
+    position: relative;
+    border-bottom: 0;
+}
+.multi-step-form .nav-tabs{
+    border: none;
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+}
+.multi-step-form a.nav-link{
+    border-radius: 0;
+    border: none;
+    font-size: 20px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+div.tab-pane {
+    display: none;
+}
+div.tab-pane.show {
+    display: block;
+}
+.multi-step-form a.nav-link.one{
+    background: #ddd;
+    color: #0d6efd;    
+    clip-path: polygon(93% 0%, 100% 50%, 93% 100%, 0% 100%, 0% 51%, 0% 0%);
+    border-radius: 7px 0 0 7px;
+}
+.multi-step-form a.nav-link.two{
+    background: #ddd;
+    color: #0d6efd;    
+    clip-path: polygon(93% 0%, 100% 50%, 93% 100%, 0% 100%, 6% 51%, 0% 0%);
+}
+.multi-step-form a.nav-link.three{
+    background: #ddd;
+    color: #0d6efd;    
+    clip-path: polygon(100% 0, 100% 51%, 100% 100%, 0% 100%, 6% 50%, 0% 0%);
+    border-radius: 0 7px 7px 0;
+
+}
+.multi-step-form a.nav-link.active{
+    background: #0d6efd;
+    color: #fff;
+}
+span.digit {
+    width: 30px;
+    height: 30px;
+    background: #aaa;
+    border-radius: 50%;
+    margin-right: 15px;
+    color: #fff;
+}
+
+.multi-step-form a.nav-link.active span.digit{
+    background: #0248b1;
+}
+.multi-step-form .tab-content{
+    padding: 20px;
+    width: 60%;
+    margin: 15px auto;
+}
+.form-control {
+    width: 100% !important;
+    height: 40px;
+    border-radius: 5px !important;
+}
+.multi-step-form .tab-content label{
+    margin-bottom: 0.5rem;
+}
+.btn-group.multi{
+    width: 100%;
+    display: inline-block;
+    background: #eee;
+    height: 70px;
+    position: absolute;
+    left: 0;
+    bottom: -71px;
+    border-radius: 0 0 10px 10px;
+    border: 1px solid #ccc;
+    padding-top: 15px;
+    text-align: center;
+}
+.input-group div.position-relative{
+    width: 100% !important;
+}
+span.errorIcon {
+    width: 25px;
+    height: 25px;
+    border: 1px solid #f00;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    top: 7px;
+    right: 10px;
+    color: #f00;
+    display: none;
+}
+.input-group span{
+    color: #f00;
+}
+#termsError{
+    width: 100%;
+}

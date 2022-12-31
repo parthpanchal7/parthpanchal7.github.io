@@ -1,0 +1,19 @@
+@media (max-width:992px){
+	.nav-menu-icon{
+		float: right;
+	    margin-top: -13px;
+	}
+	.nav-menu-icon.active{
+		float: right;
+	    margin-top: 0px;
+	    margin-right: 0px;
+	}
+}
+@media (max-width: 768px){
+	.sbt{
+		width: 50% !important;
+	}
+	.f-navigation.menu_style1{
+		padding: 30px 15px;
+	}
+}
